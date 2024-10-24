@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+
+<table>
+    <thead>
+        <tr>
+            <th>ticker</th>
+            <th>amount</th>
+            <th>price</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+        <tr>
+        {% for stock in stocks%}
+        <tr>
+            <th>{{ stock["ticker" ]}}</th>
+            <th>{{ stock["amount"] }}</th>
+            <th>{{ stock["username"] }}</th>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<p>value of stocks: {{ all_stocks }}</p>
+<p>Total Cash: {{ user_cash }}</p>
+<p>Total portfolio: {{ total }}</p>
+
+
+{% endblock %}

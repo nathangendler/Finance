@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+        <tr>
+            <div class="mb-3">
+                Name:
+                <td>{{ stocks["name"] }}</td>
+            </div>
+
+            <div class="mb-3">
+                Ticker:
+                <td>{{ stocks["symbol"] }}</td>
+            </div>
+
+            <div class="mb-3">
+                Current Price:
+                <td>{{stocks["price"]}}</td>
+            </div>
+
+            <div class="mb-3">
+                Average Total Volume:
+                <td>{{stocks["avgTotalVolume"]}}</td>
+            </div>
+
+            <div class="mb-3">
+                MarketCap:
+                <td>{{stocks["marketCap"]}}</td>
+            </div>
+
+            <div class="mb-3">
+                PE Ratio:
+                <td>{{stocks["peRatio"]}}</td>
+            </div>
+
+            <div class="mb-3">
+                52 Week High:
+                <td>{{stocks["week52High"]}}</td>
+            </div>
+
+            <div class="mb-3">
+                52 Week Low:
+                <td>{{stocks["week52Low"]}}</td>
+            </div>
+
+
+
+        </tr>
+{% endblock %}

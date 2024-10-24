@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+
+<table>
+    <thead>
+        <tr>
+            <th>ticker</th>
+            <th>price</th>
+            <th>amount</th>
+            <th>buy/sell</th>
+            <th>date/time</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+        <tr>
+        {% for transaction in transactions%}
+        <tr>
+            <th>{{ transaction["ticker" ]}}</th>
+            <th>{{ transaction["price" ]}}</th>
+            <th>{{ transaction["amount" ]}}</th>
+            <th>{{ transaction["buy_or_sell" ]}}</th>
+            <th>{{ transaction["date_time" ]}}</th>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+
+{% endblock %}
